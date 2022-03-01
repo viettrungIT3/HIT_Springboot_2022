@@ -1,0 +1,17 @@
+- Cách hoạt động của Spring Boot
+- HTTP status code: 200, 201, 204, 401. 403, 404,504
+- HTTP method:
+  - GET
+  - POST
+  - PUT/PATCh
+  - DELETE
+- Annotation:
+  - @Component: Tạo bean
+  - @Autowired: Tìm bean để thực hiện injection
+  - @Configuration, @Bean
+  - @Controller
+  - @GetMapping
+  - @RequestMapping
+- View engine: Thymeleaf
+- Truyền dữ liệu từ controller xuống view: ModelAndView
+
