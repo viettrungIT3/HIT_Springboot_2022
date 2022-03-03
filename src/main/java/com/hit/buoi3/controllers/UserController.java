@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/users")
+@RequestMapping("/buoi3/api/v1/users")
 public class UserController {
 
 //    @GetMapping()
