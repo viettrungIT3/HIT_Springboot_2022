@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hit</groupId>
-    <artifactId>Buoi3</artifactId>
+    <artifactId>BTVN3</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Buoi3</name>
-    <description>Buoi3</description>
+    <name>BTVN3</name>
+    <description>BTVN3</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -25,13 +25,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
+
 
     <build>
         <plugins>

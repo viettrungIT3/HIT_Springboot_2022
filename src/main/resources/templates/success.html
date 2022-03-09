@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Danh sách user</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!--css-->
+    <link th:href="@{css/success.css}" rel="stylesheet" />
+</head>
+<body>
+
+    <table>
+        <caption><h1>Danh sách user</h1></caption>
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">User name</th>
+            <th scope="col">Full name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item: ${accs}">
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.username}"></td>
+            <td th:text="${item.fullname}"></td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

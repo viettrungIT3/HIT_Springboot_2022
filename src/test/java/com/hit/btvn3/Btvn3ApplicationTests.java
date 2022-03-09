@@ -1,10 +1,10 @@
-package com.hit.buoi3;
+package com.hit.btvn3;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Buoi3ApplicationTests {
+class Btvn3ApplicationTests {
 
     @Test
     void contextLoads() {
