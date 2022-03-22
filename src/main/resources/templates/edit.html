@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+    <title>Edit User Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- css-->
+    <link rel="stylesheet" href="../static/css/create.css" th:href="@{css/create.css}">
+</head>
+<body>
+
+    <!-- main -->
+    <div class="main-w3layouts wrapper">
+        <h1>Edit User Form</h1>
+        <div class="main-agileinfo">
+            <div class="agileits-top">
+                <form th:action="@{/edit}" th:object="${user}" method="post">
+                    ID: <input class="text" type="text" th:value="*{id}" name="Username" placeholder="ID" readonly>
+                    Username: <input class="text" type="text" th:field="*{username}" name="Username" placeholder="Username">
+                    Full name: <input class="text" type="text" th:field="*{fullName}" name="fullName" placeholder="Full name">
+                    Enter Current Password: <input class="text" type="password" name="passwordC" placeholder="Enter Current Password" >
+                    Enter New Password: <input class="text" type="password" name="passwordN" placeholder="Enter New Password" >
+                    Re-type New Password: <input class="text" type="password" name="passwordN2" placeholder="Re-type New Password" >
+                    <p style="color: red; text-align: center" th:text="${err}"></p>
+                    <div style="display: flex">
+                        <input style="margin: 4px" type="submit" name="submit" value="SAVE">
+                        <input style="margin: 4px; background: #999999" type="submit" name="cancel" value="CANCEL">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- //main -->
+
+</body>
+</html>
