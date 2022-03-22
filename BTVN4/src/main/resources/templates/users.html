@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Danh sách user</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!--css-->
+    <link th:href="@{css/users.css}" rel="stylesheet" />
+</head>
+<body>
+
+    <table>
+        <caption><h1>Danh sách user</h1></caption>
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">User name</th>
+            <th scope="col">Pass Word</th>
+            <th scope="col">Full name</th>
+            <th class="controls col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item: ${users}">
+            <td th:text="${item.getId()}"></td>
+            <td th:text="${item.getUsername()}"></td>
+            <td th:text="${item.getPassword()}"></td>
+            <td th:text="${item.getFullName()}"></td>
+            <td class="controls">
+                <button class="mdl-button" ><a th:href="@{'/edit?id='+${item.id}}">Edit</a></button>
+                <button class="mdl-button" ><a th:href="@{'/delete/'+${item.id}}">Delete</a></button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a class="view-user" th:href="@{/api/users}">View All User</a>
+    <a class="view-user" th:href="@{/create}">Create New User</a>
+</body>
+</html>
